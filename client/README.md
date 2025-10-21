@@ -1,16 +1,89 @@
-# React + Vite
+# 🧠 Resumify.AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Crafting Smarter Resumes with AI Precision.**  
+Resumify.AI is an AI-powered resume builder that converts your experience, skills, and achievements into recruiter-ready resumes — beautifully structured, keyword-optimized, and tailored to the roles you want.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📘 Table of Contents
+1. [About](#about)
+2. [Features](#features)
+3. [Demo / Screenshots](#demo--screenshots)
+4. [Tech Stack](#tech-stack)
+5. [Quickstart — Local Installation](#quickstart--local-installation)
+6. [Usage Examples](#usage-examples)
+7. [API Reference](#api-reference)
+8. [Environment Variables](#environment-variables)
+9. [Deployment](#deployment)
+10. [Contributing](#contributing)
+11. [License](#license)
+12. [Contact](#contact)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧾 About
 
-## Expanding the ESLint configuration
+**Resumify.AI** transforms raw career data into polished resumes using AI-driven parsing, content enhancement, and job-specific optimization.  
+It supports multiple professional templates, ATS-friendly formatting, and export to PDF/Word — helping job seekers stand out effortlessly.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- Parse LinkedIn profile or plain text into structured resume sections  
+- AI-enhanced rewriting for impactful bullet points  
+- Role-specific tailoring (e.g., Developer, Designer, Manager)  
+- Multiple professional & ATS-friendly templates  
+- Export resumes to **PDF** and **DOCX**  
+- Save and manage multiple versions of resumes  
+- Keyword optimization & job match scoring  
+- Clean and responsive UI built for all devices  
+
+---
+
+## 🖼️ Demo / Screenshots
+
+> Add your screenshots or demo GIFs here  
+*(e.g., app preview, resume templates, or generation process)*
+
+![Resumify.AI Logo](assets/logo.png)
+
+---
+
+## 🧩 Tech Stack
+
+**Frontend:**
+- React.js (Vite)
+- Tailwind CSS / ShadCN UI
+- Framer Motion (animations)
+
+**Backend:**
+- Node.js, Express.js
+- MongoDB (Mongoose)
+- OpenAI API (AI text generation)
+- Puppeteer / html-pdf for PDF generation
+
+**Other Tools:**
+- Firebase Auth or JWT for Authentication
+- Cloud Storage or AWS S3 for file hosting
+- Render / Vercel for deployment
+
+---
+
+## ⚙️ Quickstart — Local Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/resumify.ai.git
+cd resumify.ai
+
+# Setup Backend
+cd server
+cp .env.example .env
+npm install
+npm run dev    # runs Express server at http://localhost:4000
+
+# Setup Frontend
+cd ../client
+npm install
+npm run dev    # runs React app at http://localhost:5173
