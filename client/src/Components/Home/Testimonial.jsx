@@ -41,7 +41,7 @@ const Testimonial = () => {
           <div className="flex items-center gap-1">
             <p>{card.name}</p>
             <svg
-              className="mt-0.5 fill-[]"
+              className="mt-0.5 fill-[#289db9]"
               width="12"
               height="12"
               viewBox="0 0 12 12"
