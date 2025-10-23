@@ -4,12 +4,12 @@ const Footer = () => {
     return (
         <>
             <footer className="flex flex-wrap justify-center lg:justify-between overflow-hidden gap-10 md:gap-20 py-16 px-6 md:px-16 lg:px-24 xl:px-32 text-[13px] text-gray-800 bg-gradient-to-r from-slate-400 via-slate-300 to-[#289db9]">
-                <div className="flex flex-wrap items-start gap-10 md:gap-[60px] xl:gap-[140px]">
+                <div className="flex flex-wrap items-start gap-10 md:gap-[30px] xl:gap-[120px]">
                     <a href="#">
                       <img src="/logo.svg" alt="logo" className='h-20 w-auto' />
                     </a>
                     <div>
-                        <p className="text-slate-100 font-semibold">Product</p>
+                        <p className="text-slate-100 font-semibold md:text-xl">Product</p>
                         <ul className="mt-2 space-y-2">
                             <li><a href="/" className="hover:text-[#289db9] transition">Home</a></li>
                             <li><a href="/" className="hover:text-[#289db9] transition">Support</a></li>
@@ -18,17 +18,17 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <p className="text-slate-100 font-semibold">Resources</p>
+                        <p className="text-slate-100 font-semibold md:text-xl">Resources</p>
                         <ul className="mt-2 space-y-2">
                             <li><a href="/" className="hover:text-[#289db9] transition">Company</a></li>
                             <li><a href="/" className="hover:text-[#289db9] transition">Blogs</a></li>
                             <li><a href="/" className="hover:text-[#289db9] transition">Community</a></li>
-                            <li><a href="/" className="hover:text-[#289db9] transition">Careers<span className="text-xs text-white bg-indigo-600 rounded-md ml-2 px-2 py-1">We’re hiring!</span></a></li>
+                            <li><a href="/" className="hover:text-[#289db9] transition">Careers</a></li>
                             <li><a href="/" className="hover:text-[#289db9] transition">About</a></li>
                         </ul>
                     </div>
                     <div>
-                        <p className="text-slate-100 font-semibold">Legal</p>
+                        <p className="text-slate-100 font-semibold md:text-xl">Legal</p>
                         <ul className="mt-2 space-y-2">
                             <li><a href="/" className="hover:text-[#289db9] transition">Privacy</a></li>
                             <li><a href="/" className="hover:text-[#289db9] transition">Terms</a></li>
@@ -68,7 +68,7 @@ const Footer = () => {
                             </svg>
                         </a>
                     </div>
-                    <p className="mt-3 text-center">© 2025 <a href="https://prebuiltui.com">PrebuiltUI</a></p>
+                    <p className="mt-3 text-center">© 2025 <a href="https://prebuiltui.com">Resumify.AI</a></p>
                 </div>
             </footer>
 
