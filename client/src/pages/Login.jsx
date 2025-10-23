@@ -2,8 +2,10 @@ import { Mail, User2Icon,Lock } from 'lucide-react'
 import React from 'react'
 
 const Login = () => {
-
-  const [state, setState] = React.useState("login")
+ 
+  const query=new URLSearchParams(window.location.search)
+  const urlState=query.get('state')
+  const [state, setState] = React.useState(urlState ||"login")
 
     const [formData, setFormData] = React.useState({
         name: '',
@@ -40,13 +42,13 @@ const Login = () => {
           <Lock size={13} color='#289db9'/>
           <input type="password" name="password" placeholder="Password" className="border-none outline-none ring-0" value={formData.password} onChange={handleChange} required />
         </div>
-        <div className="mt-4 text-left text-[#3f5965]">
+        <div className="mt-4 text-left text-[#289db9]">
           <button className="text-sm" type="reset">Forget password?</button>
         </div>
         <button type="submit" className="mt-2 w-full h-11 rounded-full text-white bg-[#3f5965] hover:opacity-90 transition-opacity">
           {state === "login" ? "Login" : "Sign up"}
         </button>
-        <p onClick={() => setState(prev => prev === "login" ? "register" : "login")} className="text-gray-500 text-sm mt-3 mb-11">{state === "login" ? "Don't have an account?" : "Already have an account?"} <a href="#" className="text-indigo-500 hover:underline">click here</a></p>
+        <p onClick={() => setState(prev => prev === "login" ? "register" : "login")} className="text-gray-500 text-sm mt-3 mb-11">{state === "login" ? "Don't have an account?" : "Already have an account?"} <a href="#" className="text-[#289db9] hover:underline">click here</a></p>
       </form>
     </div>
   )
