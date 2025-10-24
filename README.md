@@ -56,7 +56,6 @@ It supports multiple professional templates, ATS-friendly formatting, and export
   <img src="./assets/dashboard.png" width="48%" alt="Dashboard Preview"/>
   <img src="./assets/footer.png" width="48%" alt="Footer Section"/>
 </p>
-
 ---
 
 ## 🧩 Tech Stack
