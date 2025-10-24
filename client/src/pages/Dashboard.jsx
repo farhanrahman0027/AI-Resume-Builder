@@ -1,10 +1,10 @@
-import { FilePenLineIcon, PlusIcon, UploadCloudIcon, UploadIcon } from "lucide-react";
+import { FilePenLineIcon, PencilIcon, PlusIcon, TrashIcon, UploadCloudIcon, UploadIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { dummyResumeData } from "../assets/assets";
 
 const Dashboard = () => {
   
-  const colors=["#FFFFFF","#F3F4F6","#F97316","#06B6D4","#EC4899","#84CC16"]
+  const colors=["#EC4899","#F97316","#06B6D4","#EC4899","#84CC16"]
   const [allResumes,setAllResumes]=useState([]);
 
   const loadAllResumes=async () => {
@@ -39,7 +39,7 @@ const Dashboard = () => {
       </div>
       <hr className="border-slate-300 my-2 mx-4 sm:w-[305px]" />
     
-      <div className="grid grid-cols-2 sm:flex flex-wrap gap-4">
+      <div className="grid grid-cols-2 sm:flex flex-wrap gap-4 mx-10">
         {allResumes.map((resume,index)=>{
          const baseColor=colors[index%colors.length];
          return(
@@ -50,6 +50,14 @@ const Dashboard = () => {
             <p className="text-sm group-hover:scale-105 transition-all px-2 text-center" style={{color:baseColor}}>
               {resume.title}
             </p>
+            <p className="absolute bottom-1 text-[11px] text-slate-400 group-hover:text-slate-500 transition-all px-2 text-center" style={{color:baseColor+"90"}}>
+              Updated on {new Date(resume.updateAt).toLocaleDateString()}
+            </p>
+
+            <div className="absolute top-1 right-1 group-hover:flex items-center hidden">
+              <TrashIcon className="size-7 p-1.5 hover:bg-white/50 rounded text-slate-700 transition-colors"/>
+              <PencilIcon className="size-7 p-1.5 hover:bg-white/50 rounded text-slate-700 transition-colors"/>
+            </div>
           </button>
          )
         })}
