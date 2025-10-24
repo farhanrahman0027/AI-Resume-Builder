@@ -43,10 +43,9 @@ It supports multiple professional templates, ATS-friendly formatting, and export
 
 ## 🖼️ Demo / Screenshots
 
-> Add your screenshots or demo GIFs here  
-*(e.g., app preview, resume templates, or generation process)*
+> 
 
-![Resumify.AI Logo](assets/logo.png)
+![Resumify.AI Logo](/logo.svg)
 
 ---
 
