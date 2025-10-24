@@ -43,9 +43,13 @@ It supports multiple professional templates, ATS-friendly formatting, and export
 
 ## 🖼️ Demo / Screenshots
 
-> 
 
-![Resumify.AI Logo](/public/logo.svg)
+
+![Resumify.AI Logo](./assests/logo.svg)
+![Homepage Screenshot](./assests/herosection.png)
+![Homepage Screenshot](./assests/features.png)
+![Homepage Screenshot](./assests/dashboard.png)
+![Homepage Screenshot](./assets/footer.png)
 
 ---
 
