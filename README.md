@@ -45,7 +45,7 @@ It supports multiple professional templates, ATS-friendly formatting, and export
 
 > 
 
-![Resumify.AI Logo](/logo.svg)
+![Resumify.AI Logo](/public/logo.svg)
 
 ---
 
