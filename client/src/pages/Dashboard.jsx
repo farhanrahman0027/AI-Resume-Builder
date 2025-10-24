@@ -114,6 +114,8 @@ const Dashboard = () => {
                     )}
                 </div>
               </label>
+              <input type="file" id="resume-input" accept='.pdf' hidden 
+                onChange={(e)=>setResume(e.target.files[0])}/>
             </div>
             <button className="w-full py-2 bg-[#3f5965] text-white rounded hover:bg-[#289db9] transition-colors">Upload Resume</button>
             <XIcon className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 cursor-pointer transition-colors" onClick={()=>{setShowUploadResume(false); setTitle('')}}/>
