@@ -41,6 +41,16 @@ const ResumeBuilder = () => {
          <ArrowLeftIcon className='size-4'/> Back to Dashboard
         </Link>
       </div>
+
+      <div className='max-w-7xl mx-auto px-4 pb-8'>
+          <div className='grid lg:grid-cols-12 gap-8'>
+            {/*left panel-form*/}
+            <div></div>
+
+            {/*right panel-preview*/}
+            <div></div>
+          </div>
+      </div>
     </div>
   )
 }
