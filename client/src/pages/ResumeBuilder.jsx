@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams ,Link} from 'react-router-dom'
 import { dummyResumeData } from '../assets/assets'
-import { ArrowLeftIcon } from 'lucide-react'
+import { ArrowLeftIcon,Briefcase,ChevronLeft,FileText,FolderIcon,GraduationCap,Sparkles, User2} from 'lucide-react'
 
 const ResumeBuilder = () => {
 
@@ -29,14 +29,27 @@ const ResumeBuilder = () => {
     }
   }
 
+const [activeSectionIndex,setActiveSectionIndex]=useState(0);
+const [removeBackground,setRemoveBackground]=useState(false) ;
+
+const sections=[
+  {id:"personal",name:"personal info",icon:User2},
+  {id:'summary',name:"summary", icon:FileText},
+  {id:'experience',name:"experience", icon:Briefcase},
+  {id:'education',name:"education", icon:GraduationCap},
+  {id:'projects',name:"projects", icon:FolderIcon},
+  {id:'skills',name:"skills", icon:Sparkles},
+ ]
+
+const activeSection=sections[activeSectionIndex]
+
   useEffect(()=>{
     loadExistingResume()
   },[])
 
- const sections=[
-  {id:"personal",name:"personal info",icon:user},
-  {id:'summary',name:"personal info", icon:user},
- ]
+  
+
+
 
   return (
     <div>
@@ -49,8 +62,27 @@ const ResumeBuilder = () => {
       <div className='max-w-7xl mx-auto px-4 pb-8'>
           <div className='grid lg:grid-cols-12 gap-8'>
             {/*left panel-form*/}
-            <div>
+            <div className='relative lg:col-span-5 rounded-lg overflow-hidden'>
+              <div className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 pt-1'>
+                 {/* progress bar using activeSectionIndex */}
+                <hr className='absolute top-0 left-0 right-0 border-2' />
+                <hr className='absolute top-0 left-0 h-1 bg-gradient-to-r from-slate-600 to-slate-800 border-none transition-all duration-2000' style={{width:`${activeSectionIndex *100/(sections.length-1)}`}}/>
+                 
+                 {/* section  navigation*/}
+                 <div className='flex justify-between items-center mb-6 border-b border-gray-300 py-1'>
+                    
+                    <div></div>
+                    <div className='flex items-center'>
+                      {activeSectionIndex!==0 &&(
+                        <button className='flex item-center gap-1 p-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-all' disabled={activeSectionIndex ==0}>
+                          <ChevronLeft className='size-4'/>previous
+                        </button>
+                      )}
 
+                    </div>
+
+                 </div>
+              </div>
             </div>
 
             {/*right panel-preview*/}
