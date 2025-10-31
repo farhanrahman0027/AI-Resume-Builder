@@ -114,7 +114,7 @@ const Dashboard = () => {
             <input onChange={(e)=>setTitle(e.target.value)} value={title} type="text" placeholder="Enter Resume Title" className="w-full px-4 py-2 mb-4 focus:border-slate-800 ring-slate-600" required />
             <div>
               <label htmlFor="resume-input" className="block text-sm text-slate-700" >
-                Select resume file
+                Select Resume File
                 <div className="flex flex-col items-center justify-center gap-2 border group text-slate-400 border-slate-400 border-dashed rounded-md p-4 py-10 my-4 hover:border-slate-800 hover:text-[#289db9] cursor-pointer transition-colors">
                     {resume?(
                       <p className="text-[#289db9]" >{resume.name}</p>
